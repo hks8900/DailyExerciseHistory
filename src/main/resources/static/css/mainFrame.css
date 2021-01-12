@@ -1,0 +1,36 @@
+html {
+	width: 600px;
+	height: 812px;
+}
+
+header {
+	
+}
+
+nav {
+	
+}
+
+body {
+	background-color: appworkspace;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+footer {
+	height: 5%;
+	background-color: antiquewhite;
+	
+}
+
+#center {
+	display: grid;
+	align-content: space-around;
+	grid-template-columns: 20% auto;
+	grid-gap: 10px;
+}
+
+#center>aside.row>ul {
+	padding: 0;
+}

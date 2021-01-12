@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style type="text/css">
+html {
+	width: 600px;
+	height: 812px;
+}
+
+body {
+	background-color: appworkspace;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+#inputData {
+	display: grid;
+}
+</style>
+</head>
+
+<body>
+	<!-- 입력된 데이터 리스트 -->
+	<div id="selectDate">
+
+		<form action="getHistoryData" id="inputData">
+			<label for="selectCategory">Category</label>
+			<select id="selectCategory" name="selectCategory">
+				<option>dd</option>
+			</select>
+
+			<label for="startDate"> startDate </label>
+			<input type="date" id="startDate" name="startDate"
+				placeholder="startDate">
+			<label for="endDate"> endDate </label>
+			<input type="date" id="endDate" name="endDate" placeholder="endDate">
+		</form>
+
+		<p>today exercise set</p>
+		<!-- th:each  -->
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ol>
+	</div>
+
+
+
+</body>
+
+</html>

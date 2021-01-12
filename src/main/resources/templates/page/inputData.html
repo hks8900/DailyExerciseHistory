@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<link rel="stylesheet" href="/css/inputData.css">
+</head>
+
+<body>
+
+	<!-- 입력된 데이터 리스트 -->
+	<div id="todayHistory">
+		<p>today exercise set</p>
+		<!-- th:each  -->
+		<ol>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ol>
+
+	</div>
+	<!--  입력란 -->
+	<div id="writeData">
+		<!--  member -->
+		<p th:text=${id}>id</p>
+		<p th:text=${name}>name</p>
+		<form action="getRestTime">
+			<label for="restTime"> restTime</label>
+			<input type="datetime" id="restTime" name="restTime"> <input
+				type="submit">
+		</form>
+
+
+		<form action="inputWTData" method="post">
+
+			<label for="exerciseCategory"> exerciseCategory</label>
+			<select id="exerciseCategory" name="exerciseCategory">
+				<option value="UpperBody">UpperBody</option>
+				<option value="LowerBody">LowerBody</option>
+				<option value="Aerobic">Aerobic</option>
+			</select>
+
+			<!-- after eC, show selectExercise -->
+			<label for="selectExercise"> selectExercise</label>
+			<select id="selectExercise" name="selectExercise">
+				<option th:each="data : ${UpperBodyCategory}"
+					th:value="weightTrainingUpper" th:text="${data}">UpperBody</option>
+			</select>
+
+			<label for="count"> count </label>
+			<input type="number" id="count" name="count" th:value="count"
+				placeholder="write count here [number]">
+
+			<label for="weight"> weight </label>
+			<input type="number" id="weight" name="weight" th:value="weight"
+				placeholder="write count here [Kg]">
+
+			<label for="speed"> speed </label>
+			<input type="number" id="speed" name="speed" th:value="speed"
+				placeholder="write speed here [Km]"> <input type="submit">
+		</form>
+
+		<form action="/layoutFrame/mainFrame">
+			<button>main</button>
+		</form>
+	</div>
+
+</body>
+
+</html>

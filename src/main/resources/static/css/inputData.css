@@ -1,0 +1,16 @@
+@charset "UTF-8";
+html {
+	width: 600px;
+	height: 812px;
+}
+
+body {
+	background-color: appworkspace;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+}
+
+#writeData form {
+	display: grid;
+}

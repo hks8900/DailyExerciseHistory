@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" href="/css/mainFrame.css">
+<title>Gym</title>
+
+</head>
+
+<body>
+	<header th:insert="page/header :: header"> </header>
+	<nav>
+		<a href="#"> 1</a> <a href="#"> 2</a> <a href="#"> 3</a> <a href="#">
+			4</a>
+	</nav>
+	<div id="center">
+
+		<aside class="row">
+			<div id="userInfo">
+				<p th:text="${userId}"></p>
+				<p th:text="${userName}"></p>
+				<p th:text="${userEmail}"></p>
+			</div>
+			<ul>
+				<li><a href="inputWeightTraining">DataInput</a></li>
+				<li><a href="registerPage">registerPage</a></li>
+				<li><a href="members">members</a></li>
+				<li><a href="history">history</a></li>
+			</ul>
+		</aside>
+		<section th:insert="page/mainPage :: main" class="center"></section>
+	</div>
+
+	<footer th:insert="page/footer :: footer"> 하단 빈칸 </footer>
+</body>
+
+</html>
+
+
